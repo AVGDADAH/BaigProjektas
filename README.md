@@ -1,2 +1,2 @@
 # BaigProjektas #
-Baigiamasis projektas tema Anime
+Baigiamasis projektas tema: Anime
