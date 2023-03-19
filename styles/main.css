@@ -1,8 +1,77 @@
 body {
-  background-color: #121212;
+  background-color: #805252;
+}
+
+h1 {
+  color: #fff;
 }
 
 #search {
   background-color: #519872;
   border-color: #519872;
+  height: 2em;
+}
+
+.testimg .Animee {
+  width: 9em;
+  height: 14em;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 9px;
+  border-color: #09e3ef;
+}
+
+#imgdiv {
+  display: grid;
+  grid-template-columns: repeat(15, 0fr);
+  gap: 2em;
+}
+#imgdiv .testimg .ACover {
+  width: 9em;
+  height: 14em;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 9px;
+  border-color: #09e3ef;
+}
+#imgdiv .testimg .AnimeTitle {
+  margin-top: 3px;
+  word-wrap: break-word;
+  text-align: center;
+}
+#imgdiv .testimg .rating {
+  margin-top: -3.9em;
+  margin-left: 3px;
+  opacity: 0;
+  background-color: rgba(10, 10, 5, 0.6);
+  text-align: center;
+  color: white;
+  transition: opacity 0.4s ease-in 110ms;
+}
+#imgdiv .testimg:hover .rating {
+  opacity: 0.8;
+}
+#imgdiv .ACover {
+  width: 9em;
+  height: 14em;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 9px;
+  border-color: #09e3ef;
+}
+#imgdiv * {
+  width: 9em;
+}
+
+.darkmode {
+  background-color: #252525;
+}
+
+.darkmode_textcolor {
+  color: #fff;
+}
+
+.DarkmodeSwitch {
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
 }/*# sourceMappingURL=main.css.map */
