@@ -20,11 +20,26 @@ function handleData(data){
         }
         let NEW_ANIME = AnimeCardTemplate.cloneNode(true);
         const ANIME_TITLE = NEW_ANIME.querySelector("#AnimeTitle")
-        ANIME_TITLE.textContent = result.title.english;
+
+        if (result.title.english !== null){
+            ANIME_TITLE.textContent = result.title.english;
+        }
+        else if (result.title.romaji !== null){
+            ANIME_TITLE.textContent = result.title.romaji;
+        }
+        else if (result.title.native !== null){
+            ANIME_TITLE.textContent = result.title.native;
+        }
+        else{
+            console.log(`Null title detected id: ${result.id} type:${result.type} status:${result.status}`);
+        }
+
         if (document.getElementById("darkmode").checked){
             ANIME_TITLE.classList.toggle("darkmode_textcolor")
         }
         const ANIME_COVER = NEW_ANIME.querySelector("#AnimeCover");
+        const ANIME_LINK = NEW_ANIME.querySelector("#LinkToSource");
+        ANIME_LINK.href = `https://anilist.co/${result.type}/${result.id}`;
         ANIME_COVER.src = result.coverImage.large;
         imagesdiv.appendChild(NEW_ANIME);
     }
@@ -70,6 +85,7 @@ function search_for_anilist(){
                     title {
                         english
                         romaji
+                        native
                     }
                     type
                     genres
