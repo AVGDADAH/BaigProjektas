@@ -23,7 +23,7 @@ h1 {
 
 #imgdiv {
   display: grid;
-  grid-template-columns: repeat(15, 0fr);
+  grid-template-columns: repeat(7, 0fr);
   gap: 2em;
 }
 #imgdiv .testimg .ACover {
