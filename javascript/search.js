@@ -15,6 +15,9 @@ function handleData(data){
     let AnimeCardTemplate = document.getElementById("AnimeInfo").content;
     let dswitch = document.getElementById("darkmode");
     for (let result of data.data.Page.media){
+        if (result.genres.includes("Hentai")){
+            continue;
+        }
         let NEW_ANIME = AnimeCardTemplate.cloneNode(true);
         const ANIME_TITLE = NEW_ANIME.querySelector("#AnimeTitle")
         ANIME_TITLE.textContent = result.title.english;
