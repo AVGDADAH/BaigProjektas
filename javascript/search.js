@@ -13,7 +13,11 @@ function handleData(data){
         return;
     }
     let AnimeCardTemplate = document.getElementById("AnimeInfo").content;
-    let dswitch = document.getElementById("darkmode");
+
+    while (imagesdiv.firstChild){ //Deletes the previous anime that were there//
+        imagesdiv.removeChild(imagesdiv.lastChild);
+    }
+
     for (let result of data.data.Page.media){
         if (result.genres.includes("Hentai")){
             continue;
@@ -52,9 +56,6 @@ function handleError(error){
 }
 
 function search_for_anilist(){
-    while (imagesdiv.firstChild){
-        imagesdiv.removeChild(imagesdiv.lastChild);
-    }
     const search_field = document.getElementById("search_field");
     const anime = search_field.value;
     if (anime.length === 0){
